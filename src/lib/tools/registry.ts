@@ -138,7 +138,7 @@ export const TOOLS: ToolDefinition[] = [
       },
       {
         question: "What image formats are supported?",
-        answer: "ToolNest Image Compressor supports JPG, JPEG, PNG, and WebP image files.",
+        answer: "MyToolsHut Image Compressor supports JPG, JPEG, PNG, and WebP image files.",
       },
       {
         question: "Does compressing reduce visual quality?",
@@ -149,7 +149,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Since compression runs on your local machine, there are no artificial server limits. You can process high-resolution images as long as your browser has sufficient memory.",
       },
     ],
-    seoTitle: "Free Online Image Compressor — Fast & Private | ToolNest",
+    seoTitle: "Free Online Image Compressor — Fast & Private | MyToolsHut",
     seoDescription: "Compress JPG, PNG, and WebP images online for free. 100% local browser processing with no file uploads, live preview, and instant downloads.",
   },
 
@@ -191,7 +191,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Presets include Instagram Square (1080x1080), Instagram Story (1080x1920), YouTube Thumbnail (1280x720), YouTube Banner (2560x1440), Facebook Cover (820x312), and LinkedIn Banner (1584x396).",
       },
     ],
-    seoTitle: "Free Image Resizer Online — Dimensions & Social Presets | ToolNest",
+    seoTitle: "Free Image Resizer Online — Dimensions & Social Presets | MyToolsHut",
     seoDescription: "Resize images to custom pixel dimensions, percentage, or social media presets online for free. Private client-side processing.",
   },
 
@@ -227,7 +227,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Never. Conversion is processed locally in your web browser.",
       },
     ],
-    seoTitle: "JPG to PNG Converter — Fast & Free Online | ToolNest",
+    seoTitle: "JPG to PNG Converter — Fast & Free Online | MyToolsHut",
     seoDescription: "Convert JPG and JPEG images to PNG format online for free. Batch conversion, no watermark, 100% private browser processing.",
   },
 
@@ -259,7 +259,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Since JPG doesn't support transparency, transparent areas are smoothly filled with a clean white background.",
       },
     ],
-    seoTitle: "PNG to JPG Converter — Free Online Tool | ToolNest",
+    seoTitle: "PNG to JPG Converter — Free Online Tool | MyToolsHut",
     seoDescription: "Convert PNG images to JPG format online for free. Reduce file size with quality control and private browser processing.",
   },
 
@@ -298,10 +298,10 @@ export const TOOLS: ToolDefinition[] = [
       },
       {
         question: "Can I use this for YouTube Shorts?",
-        answer: "Yes, you can paste links from youtube.com/shorts/ and ToolNest will extract the thumbnail seamlessly.",
+        answer: "Yes, you can paste links from youtube.com/shorts/ and MyToolsHut will extract the thumbnail seamlessly.",
       },
     ],
-    seoTitle: "YouTube Thumbnail Downloader — 1080p HD Cover Images | ToolNest",
+    seoTitle: "YouTube Thumbnail Downloader — 1080p HD Cover Images | MyToolsHut",
     seoDescription: "Download high-resolution YouTube video and Shorts thumbnails online. Free, fast, supporting 1080p MaxRes, Standard, and High Quality.",
   },
 
@@ -317,7 +317,7 @@ export const TOOLS: ToolDefinition[] = [
     isImplemented: true,
     localProcessing: false,
     features: [
-      "Create clean, compact short links (e.g. toolnest.site/s/abc123)",
+      "Create clean, compact short links (e.g. mytoolshut.com/s/abc123)",
       "Custom alias support for branded links",
       "Automatic QR Code generation for every shortened link",
       "Built-in click counter and redirect tracking",
@@ -333,7 +333,7 @@ export const TOOLS: ToolDefinition[] = [
     faqs: [
       {
         question: "How long do shortened links remain active?",
-        answer: "Short links created on ToolNest do not expire unless explicitly configured with an expiration date or removed for policy violation.",
+        answer: "Short links created on MyToolsHut do not expire unless explicitly configured with an expiration date or removed for policy violation.",
       },
       {
         question: "Are shortened links secure?",
@@ -344,7 +344,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Yes, every redirect is recorded so you can monitor click counts.",
       },
     ],
-    seoTitle: "Free URL Shortener — Custom Short Links & Click Tracking | ToolNest",
+    seoTitle: "Free URL Shortener — Custom Short Links & Click Tracking | MyToolsHut",
     seoDescription: "Shorten long URLs into clean, fast, trackable short links with custom aliases and QR codes. Free and reliable link management.",
   },
 
@@ -383,7 +383,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Reading time is calculated using the standard average reading speed of 200 words per minute (WPM), while speaking time uses 130 WPM.",
       },
     ],
-    seoTitle: "Free Online Word Counter & Character Analyzer | ToolNest",
+    seoTitle: "Free Online Word Counter & Character Analyzer | MyToolsHut",
     seoDescription: "Count words, characters, sentences, paragraphs, and reading time in real time. Free, 100% private in-browser text tool.",
   },
 
@@ -413,7 +413,7 @@ export const TOOLS: ToolDefinition[] = [
     ],
     faqs: [
       {
-        question: "Do ToolNest QR codes ever expire?",
+        question: "Do MyToolsHut QR codes ever expire?",
         answer: "No. The QR codes generated are static barcodes containing your encoded data directly. They will work permanently.",
       },
       {
@@ -421,7 +421,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "No. Because they are static QR codes, you can scan them an unlimited number of times.",
       },
     ],
-    seoTitle: "Free QR Code Generator — Custom Colors & High Res | ToolNest",
+    seoTitle: "Free QR Code Generator — Custom Colors & High Res | MyToolsHut",
     seoDescription: "Create free custom QR codes for URLs, text, WiFi, and contacts. Customize colors, download high-resolution PNG or SVG instantly.",
   },
 
@@ -460,7 +460,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "A strong password contains at least 16 characters with a combination of uppercase letters, lowercase letters, numbers, and special symbols.",
       },
     ],
-    seoTitle: "Secure Password Generator — Strong & Random | ToolNest",
+    seoTitle: "Secure Password Generator — Strong & Random | MyToolsHut",
     seoDescription: "Generate cryptographically secure, random passwords online for free. Customizable length, symbols, and live strength meter. 100% private.",
   },
 
@@ -494,7 +494,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "No. All formatting and validation happens locally in JavaScript in your browser. Nothing is sent to any external server.",
       },
     ],
-    seoTitle: "Free JSON Formatter & Validator Online | ToolNest",
+    seoTitle: "Free JSON Formatter & Validator Online | MyToolsHut",
     seoDescription: "Format, validate, beautify, and minify JSON online for free. Real-time syntax error locator and 100% client-side privacy.",
   },
 
@@ -527,7 +527,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Yes, our implementation handles Unicode and UTF-8 characters properly so accented letters and symbols will not get garbled.",
       },
     ],
-    seoTitle: "Base64 Encoder and Decoder Online | ToolNest",
+    seoTitle: "Base64 Encoder and Decoder Online | MyToolsHut",
     seoDescription: "Encode text to Base64 and decode Base64 strings online for free. Full UTF-8 support and 100% client-side processing.",
   },
 
@@ -561,7 +561,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Conversions use internationally standardized mathematical conversion factors with high floating-point precision.",
       },
     ],
-    seoTitle: "Free Online Unit Converter — Length, Weight & Temp | ToolNest",
+    seoTitle: "Free Online Unit Converter — Length, Weight & Temp | MyToolsHut",
     seoDescription: "Convert length, weight, temperature, and digital storage units online for free. Fast, accurate, real-time conversion.",
   },
 
@@ -594,7 +594,7 @@ export const TOOLS: ToolDefinition[] = [
         answer: "Aim for 50–60 characters for your page title and 140–160 characters for your meta description so they do not get truncated in search results.",
       },
     ],
-    seoTitle: "Free Meta Tag & Open Graph Generator | ToolNest",
+    seoTitle: "Free Meta Tag & Open Graph Generator | MyToolsHut",
     seoDescription: "Generate standard SEO meta tags, Open Graph tags, and Twitter Cards online for free with live SERP preview.",
   },
 ];

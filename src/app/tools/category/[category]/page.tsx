@@ -29,8 +29,8 @@ export async function generateMetadata({
   if (!cat) return { title: "Category Not Found" };
 
   return {
-    title: `${cat.name} — Free Online Utilities | ToolNest`,
-    description: `Discover free online ${cat.name.toLowerCase()} on ToolNest. ${cat.shortDescription}`,
+    title: `${cat.name} — Free Online Utilities | MyToolsHut`,
+    description: `Discover free online ${cat.name.toLowerCase()} on MyToolsHut. ${cat.shortDescription}`,
   };
 }
 

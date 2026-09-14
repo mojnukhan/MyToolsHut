@@ -59,7 +59,7 @@ export function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold tracking-tight text-neutral-900 dark:text-white leading-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                Tool<span className="text-indigo-600 dark:text-indigo-400">Nest</span>
+                MyTools<span className="text-indigo-600 dark:text-indigo-400">Hut</span>
               </span>
               <span className="text-[10px] font-medium text-neutral-400 tracking-wide mt-0.5">
                 Free Online Tools

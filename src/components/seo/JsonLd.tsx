@@ -2,7 +2,7 @@ import React from "react";
 import { ToolDefinition, CATEGORIES } from "@/lib/tools/registry";
 
 export function ToolJsonLd({ tool }: { tool: ToolDefinition }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolnest.site";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mytoolshut.com";
   const category = CATEGORIES[tool.category];
 
   // 1. SoftwareApplication Schema

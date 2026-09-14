@@ -4,9 +4,9 @@ import { Wrench, Shield, Zap, Heart, CheckCircle2, ArrowRight } from "lucide-rea
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About ToolNest — Free Online Tools for Everyone",
+  title: "About MyToolsHut — Free Online Tools for Everyone",
   description:
-    "Learn about ToolNest's mission to provide fast, private, accessible, and 100% free online tools for creators, developers, and everyday users.",
+    "Learn about MyToolsHut's mission to provide fast, private, accessible, and 100% free online tools for creators, developers, and everyday users.",
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
             <Wrench className="w-6 h-6 -rotate-12" />
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white">
-            About ToolNest
+            About MyToolsHut
           </h1>
           <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto leading-relaxed">
             Free online tools for everyone. Simple, lightning-fast, and engineered with an uncompromising respect for user privacy.
@@ -34,10 +34,10 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p>
-              The internet is saturated with utility websites weighed down by intrusive ads, deceptive download links, forced account registrations, and slow server queues. ToolNest was founded with a singular purpose: to deliver clean, modern, and reliable utilities that simply work — instantly and for free.
+              The internet is saturated with utility websites weighed down by intrusive ads, deceptive download links, forced account registrations, and slow server queues. MyToolsHut was founded with a singular purpose: to deliver clean, modern, and reliable utilities that simply work — instantly and for free.
             </p>
             <p>
-              Whether you need to compress a photograph for an application, resize a graphic for social media, shorten an ugly URL, or format a messy JSON document, ToolNest provides accessible tools designed for both professionals and beginners.
+              Whether you need to compress a photograph for an application, resize a graphic for social media, shorten an ugly URL, or format a messy JSON document, MyToolsHut provides accessible tools designed for both professionals and beginners.
             </p>
           </div>
 

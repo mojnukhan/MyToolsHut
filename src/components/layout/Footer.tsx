@@ -15,11 +15,11 @@ export function Footer() {
                 <Wrench className="w-4 h-4 -rotate-12" />
               </div>
               <span className="text-lg font-bold tracking-tight text-neutral-900 dark:text-white">
-                Tool<span className="text-indigo-600 dark:text-indigo-400">Nest</span>
+                MyTools<span className="text-indigo-600 dark:text-indigo-400">Hut</span>
               </span>
             </Link>
             <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3 max-w-sm leading-relaxed">
-              ToolNest is a modern, high-speed online tools platform built for everyone.
+              MyToolsHut is a modern, high-speed online tools platform built for everyone.
               Process files right in your browser with zero bloat and maximum privacy.
             </p>
             <div className="flex items-center gap-3 mt-4 text-neutral-400 dark:text-neutral-500">
@@ -119,7 +119,7 @@ export function Footer() {
                   href="/about"
                   className="text-neutral-500 dark:text-neutral-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
-                  About ToolNest
+                  About MyToolsHut
                 </Link>
               </li>
               <li>
@@ -168,7 +168,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 mt-8 border-t border-neutral-200 dark:border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500 dark:text-neutral-400">
-          <p>© 2026 ToolNest. All rights reserved.</p>
+          <p>© 2026 MyToolsHut. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span className="inline-flex items-center gap-1">
               Engineered with <Heart className="w-3 h-3 text-red-500 fill-red-500" /> for creators & developers

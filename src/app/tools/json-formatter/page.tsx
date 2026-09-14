@@ -66,7 +66,7 @@ export default function JsonFormatterPage() {
 
   const handleSample = () => {
     const sample = {
-      project: "ToolNest",
+      project: "MyToolsHut",
       tagline: "Free Online Tools for Everyone",
       features: ["Client-side processing", "Instant downloads", "Dark mode"],
       stats: {

@@ -121,7 +121,7 @@ export default function AdminDashboardPage() {
               <Shield className="w-6 h-6" />
             </div>
             <h1 className="text-2xl font-black text-neutral-900 dark:text-white">
-              ToolNest Admin Portal
+              MyToolsHut Admin Portal
             </h1>
             <p className="text-xs text-neutral-500 mt-1">
               Enter your administrative secret key to access system metrics and link management.
@@ -170,7 +170,7 @@ export default function AdminDashboardPage() {
               href="/"
               className="text-xs text-neutral-500 hover:text-indigo-600 dark:hover:text-indigo-400"
             >
-              ← Return to ToolNest Homepage
+              ← Return to MyToolsHut Homepage
             </Link>
           </div>
         </div>
@@ -279,7 +279,7 @@ export default function AdminDashboardPage() {
                 Recent Short URLs & Click Stats
               </h2>
               <p className="text-xs text-neutral-500">
-                Latest shortened links generated through ToolNest
+                Latest shortened links generated through MyToolsHut
               </p>
             </div>
           </div>

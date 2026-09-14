@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://toolnest.site"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mytoolshut.com"),
   title: {
-    default: "ToolNest — Free Online Tools for Everyone",
-    template: "%s | ToolNest",
+    default: "MyToolsHut — Free Online Tools for Everyone",
+    template: "%s | MyToolsHut",
   },
   description:
     "Compress images, convert files, shorten URLs, download YouTube thumbnails, and use developer & SEO utilities — all free and fast.",
@@ -36,19 +36,19 @@ export const metadata: Metadata = {
     "developer tools",
     "seo tools",
   ],
-  authors: [{ name: "ToolNest Team" }],
+  authors: [{ name: "MyToolsHut Team" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toolnest.site",
-    siteName: "ToolNest",
-    title: "ToolNest — Free Online Tools for Everyone",
+    url: "https://mytoolshut.com",
+    siteName: "MyToolsHut",
+    title: "MyToolsHut — Free Online Tools for Everyone",
     description:
       "Compress images, convert files, shorten URLs, download YouTube thumbnails and more — all in one place.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ToolNest — Free Online Tools for Everyone",
+    title: "MyToolsHut — Free Online Tools for Everyone",
     description:
       "Compress images, convert files, shorten URLs, download YouTube thumbnails and more — all in one place.",
   },

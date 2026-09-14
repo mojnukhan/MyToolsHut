@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Disclaimer | ToolNest",
-  description: "ToolNest legal disclaimer regarding third-party services and tool accuracy.",
+  title: "Disclaimer | MyToolsHut",
+  description: "MyToolsHut legal disclaimer regarding third-party services and tool accuracy.",
 };
 
 export default function DisclaimerPage() {
@@ -25,10 +25,10 @@ export default function DisclaimerPage() {
               1. Third-Party Trademarks & YouTube
             </h2>
             <p>
-              ToolNest is an independent online tools platform and is not affiliated, associated, authorized, endorsed by, or in any way officially connected with YouTube, Google LLC, Meta Platforms, Instagram, Twitter/X, or any of their subsidiaries or affiliates.
+              MyToolsHut is an independent online tools platform and is not affiliated, associated, authorized, endorsed by, or in any way officially connected with YouTube, Google LLC, Meta Platforms, Instagram, Twitter/X, or any of their subsidiaries or affiliates.
             </p>
             <p>
-              The YouTube Thumbnail Downloader tool retrieves only publicly accessible cover images that are openly distributed by YouTube. ToolNest does not host, download, convert, or distribute copyrighted video or audio streams.
+              The YouTube Thumbnail Downloader tool retrieves only publicly accessible cover images that are openly distributed by YouTube. MyToolsHut does not host, download, convert, or distribute copyrighted video or audio streams.
             </p>
           </section>
 
@@ -37,7 +37,7 @@ export default function DisclaimerPage() {
               2. Accuracy of Calculations
             </h2>
             <p>
-              While all unit conversions, word counts, and cryptographic routines have been programmed in accordance with recognized mathematical and computational standards, ToolNest makes no guarantee of absolute fitness for mission-critical, legal, medical, or financial purposes.
+              While all unit conversions, word counts, and cryptographic routines have been programmed in accordance with recognized mathematical and computational standards, MyToolsHut makes no guarantee of absolute fitness for mission-critical, legal, medical, or financial purposes.
             </p>
           </section>
         </div>

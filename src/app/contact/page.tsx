@@ -129,7 +129,7 @@ export default function ContactPage() {
                   rows={5}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="How can we help or improve ToolNest?"
+                  placeholder="How can we help or improve MyToolsHut?"
                   className="w-full p-3.5 text-sm rounded-xl border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 focus:ring-2 focus:ring-indigo-500 focus:outline-none resize-y"
                 />
               </div>

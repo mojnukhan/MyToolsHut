@@ -1,8 +1,8 @@
-# ToolNest — Free Online Tools for Everyone
+# MyToolsHut — Free Online Tools for Everyone
 
 > Production-ready, modern, SaaS-style online tools platform built with Next.js 15, TypeScript, Tailwind CSS, Prisma, and browser-side client APIs.
 
-![ToolNest Platform](https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/og.jpg)
+![MyToolsHut Platform](https://raw.githubusercontent.com/shadcn-ui/ui/main/apps/www/public/og.jpg)
 
 ---
 
@@ -66,7 +66,7 @@ cp .env.example .env
 |---|---|---|
 | `DATABASE_URL` | Prisma connection string (SQLite for local, PostgreSQL for prod) | `file:./dev.db` |
 | `NEXT_PUBLIC_SITE_URL` | Canonical URL of your deployment | `http://localhost:3000` |
-| `ADMIN_SECRET_KEY` | Secret password required to access `/admin` | `toolnest-admin-secure-key-2026` |
+| `ADMIN_SECRET_KEY` | Secret password required to access `/admin` | `mytoolshut-admin-secure-key-2026` |
 
 ---
 
@@ -118,7 +118,7 @@ In your production environment (e.g. Vercel, Supabase, Neon, Railway):
    ```
    DATABASE_URL="postgresql://username:password@db.supabase.co:5432/postgres?sslmode=require"
    ```
-2. Set `NEXT_PUBLIC_SITE_URL` to your live domain (e.g., `https://toolnest.site`).
+2. Set `NEXT_PUBLIC_SITE_URL` to your live domain (e.g., `https://mytoolshut.com`).
 3. Set `ADMIN_SECRET_KEY` to a strong random token.
 4. Run migrations:
    ```bash
@@ -143,4 +143,4 @@ npm run build
 
 ## 📄 License
 
-© 2026 ToolNest. All rights reserved.
+© 2026 MyToolsHut. All rights reserved.

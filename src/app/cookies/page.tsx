@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | ToolNest",
-  description: "Information regarding cookie usage and local storage on ToolNest.",
+  title: "Cookie Policy | MyToolsHut",
+  description: "Information regarding cookie usage and local storage on MyToolsHut.",
 };
 
 export default function CookiesPage() {
@@ -31,10 +31,10 @@ export default function CookiesPage() {
 
           <section className="space-y-2">
             <h2 className="text-base font-bold text-neutral-900 dark:text-white">
-              How ToolNest Uses Cookies
+              How MyToolsHut Uses Cookies
             </h2>
             <p>
-              ToolNest maintains a minimal cookie footprint. We use cookies and local storage exclusively for:
+              MyToolsHut maintains a minimal cookie footprint. We use cookies and local storage exclusively for:
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li><strong>UI Preferences:</strong> Storing your preferred color theme (Light vs. Dark Mode) in local storage.</li>

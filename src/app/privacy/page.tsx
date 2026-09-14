@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | ToolNest",
-  description: "Learn how ToolNest protects your data and enforces browser-side processing privacy.",
+  title: "Privacy Policy | MyToolsHut",
+  description: "Learn how MyToolsHut protects your data and enforces browser-side processing privacy.",
 };
 
 export default function PrivacyPage() {
@@ -25,7 +25,7 @@ export default function PrivacyPage() {
               1. Overview & Core Philosophy
             </h2>
             <p>
-              At ToolNest (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), we believe privacy is a fundamental human right. Our platform is architected to eliminate unnecessary server-side data collection. We prioritize client-side execution in your browser whenever technically possible.
+              At MyToolsHut (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), we believe privacy is a fundamental human right. Our platform is architected to eliminate unnecessary server-side data collection. We prioritize client-side execution in your browser whenever technically possible.
             </p>
           </section>
 

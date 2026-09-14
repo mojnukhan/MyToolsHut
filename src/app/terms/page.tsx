@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | ToolNest",
-  description: "Terms and conditions governing the use of ToolNest online utilities and services.",
+  title: "Terms of Service | MyToolsHut",
+  description: "Terms and conditions governing the use of MyToolsHut online utilities and services.",
 };
 
 export default function TermsPage() {
@@ -25,7 +25,7 @@ export default function TermsPage() {
               1. Acceptance of Terms
             </h2>
             <p>
-              By accessing and utilizing ToolNest (&quot;ToolNest&quot;, &quot;the Service&quot;), you agree to be bound by these Terms of Service. If you disagree with any portion of these terms, you must discontinue using our services immediately.
+              By accessing and utilizing MyToolsHut (&quot;MyToolsHut&quot;, &quot;the Service&quot;), you agree to be bound by these Terms of Service. If you disagree with any portion of these terms, you must discontinue using our services immediately.
             </p>
           </section>
 
@@ -34,7 +34,7 @@ export default function TermsPage() {
               2. Acceptable Use Policy
             </h2>
             <p>
-              You agree not to use ToolNest for any unlawful or prohibited purpose. Specifically, with respect to our URL Shortener and developer utilities, you may not:
+              You agree not to use MyToolsHut for any unlawful or prohibited purpose. Specifically, with respect to our URL Shortener and developer utilities, you may not:
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li>Shorten URLs pointing to malware, phishing sites, or fraudulent services.</li>
@@ -48,7 +48,7 @@ export default function TermsPage() {
               3. Disclaimer of Warranties
             </h2>
             <p>
-              All tools and utilities on ToolNest are provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, whether express or implied. ToolNest does not warrant that files processed will meet your exact requirements or that the service will be uninterrupted or error-free.
+              All tools and utilities on MyToolsHut are provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, whether express or implied. MyToolsHut does not warrant that files processed will meet your exact requirements or that the service will be uninterrupted or error-free.
             </p>
           </section>
 
@@ -57,7 +57,7 @@ export default function TermsPage() {
               4. Termination
             </h2>
             <p>
-              ToolNest reserves the right to disable any shortened URL or restrict access to any IP address found to be in violation of these terms without prior notice.
+              MyToolsHut reserves the right to disable any shortened URL or restrict access to any IP address found to be in violation of these terms without prior notice.
             </p>
           </section>
         </div>

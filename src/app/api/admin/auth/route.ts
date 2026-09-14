@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const { key } = await req.json();
-    const adminKey = process.env.ADMIN_SECRET_KEY || "toolnest-admin-secure-key-2026";
+    const adminKey = process.env.ADMIN_SECRET_KEY || "mytoolshut-admin-secure-key-2026";
 
     if (!key || key !== adminKey) {
       return NextResponse.json(
@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     }
 
     const res = NextResponse.json({ success: true, role: "ADMIN" });
-    res.cookies.set("toolnest_admin_token", adminKey, {
+    res.cookies.set("mytoolshut_admin_token", adminKey, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
@@ -29,6 +29,6 @@ export async function POST(req: NextRequest) {
 
 export async function DELETE() {
   const res = NextResponse.json({ success: true });
-  res.cookies.delete("toolnest_admin_token");
+  res.cookies.delete("mytoolshut_admin_token");
   return res;
 }

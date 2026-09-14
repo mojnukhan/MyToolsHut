@@ -3,8 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { TOOLS, CATEGORIES } from "@/lib/tools/registry";
 
 export async function GET(req: NextRequest) {
-  const adminKey = process.env.ADMIN_SECRET_KEY || "toolnest-admin-secure-key-2026";
-  const cookie = req.cookies.get("toolnest_admin_token")?.value;
+  const adminKey = process.env.ADMIN_SECRET_KEY || "mytoolshut-admin-secure-key-2026";
+  const cookie = req.cookies.get("mytoolshut_admin_token")?.value;
   const header = req.headers.get("x-admin-key");
 
   if (cookie !== adminKey && header !== adminKey) {

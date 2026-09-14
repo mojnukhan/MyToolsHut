@@ -85,8 +85,8 @@ export default function HomePage() {
 
   const homeFaqs = [
     {
-      q: "Is ToolNest really 100% free to use?",
-      a: "Yes! All tools on ToolNest are completely free to use with no hidden fees, subscriptions, or limits. You can process as many files as you need.",
+      q: "Is MyToolsHut really 100% free to use?",
+      a: "Yes! All tools on MyToolsHut are completely free to use with no hidden fees, subscriptions, or limits. You can process as many files as you need.",
     },
     {
       q: "Are my files uploaded to your servers?",
@@ -97,12 +97,12 @@ export default function HomePage() {
       a: "No account or registration is required to use any of the public tools. You can use them immediately with zero friction.",
     },
     {
-      q: "Can I use ToolNest on my smartphone?",
-      a: "Yes! ToolNest is built with responsive mobile-first architecture and touch controls, working smoothly on iOS, Android, and tablets.",
+      q: "Can I use MyToolsHut on my smartphone?",
+      a: "Yes! MyToolsHut is built with responsive mobile-first architecture and touch controls, working smoothly on iOS, Android, and tablets.",
     },
     {
       q: "How does the URL Shortener work?",
-      a: "Our URL shortener generates a clean, permanent link (e.g. toolnest.site/s/code) that redirects visitors to your destination URL while recording anonymous click statistics.",
+      a: "Our URL shortener generates a clean, permanent link (e.g. mytoolshut.com/s/code) that redirects visitors to your destination URL while recording anonymous click statistics.",
     },
   ];
 
@@ -271,18 +271,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. WHY CHOOSE TOOLNEST */}
+      {/* 4. WHY CHOOSE MYTOOLSHUT */}
       <section className="bg-neutral-50 dark:bg-neutral-900/40 py-16 border-y border-neutral-200 dark:border-neutral-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-              Why ToolNest?
+              Why MyToolsHut?
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-neutral-900 dark:text-white mt-1">
               Built for Speed, Privacy & Simplicity
             </h2>
             <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-              We engineered ToolNest to be the tools platform we always wanted to use.
+              We engineered MyToolsHut to be the tools platform we always wanted to use.
             </p>
           </div>
 
@@ -354,7 +354,7 @@ export default function HomePage() {
             Frequently Asked Questions
           </h2>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-2">
-            Everything you need to know about ToolNest services and privacy.
+            Everything you need to know about MyToolsHut services and privacy.
           </p>
         </div>
 

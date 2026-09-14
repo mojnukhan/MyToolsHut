@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { TOOLS, CATEGORIES, ToolCategoryKey } from "@/lib/tools/registry";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolnest.site";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mytoolshut.com";
 
   const staticPages: MetadataRoute.Sitemap = [
     {

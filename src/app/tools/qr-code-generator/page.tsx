@@ -23,7 +23,7 @@ type QRDataType = "url" | "text" | "wifi" | "email" | "phone";
 export default function QrCodeGeneratorPage() {
   const tool = getToolBySlug("qr-code-generator")!;
   const [dataType, setDataType] = useState<QRDataType>("url");
-  const [url, setUrl] = useState("https://toolnest.site");
+  const [url, setUrl] = useState("https://mytoolshut.com");
   const [text, setText] = useState("");
   const [wifiSsid, setWifiSsid] = useState("");
   const [wifiPassword, setWifiPassword] = useState("");
@@ -45,9 +45,9 @@ export default function QrCodeGeneratorPage() {
   const getPayload = (): string => {
     switch (dataType) {
       case "url":
-        return url.trim() || "https://toolnest.site";
+        return url.trim() || "https://mytoolshut.com";
       case "text":
-        return text.trim() || "ToolNest Free Online Tools";
+        return text.trim() || "MyToolsHut Free Online Tools";
       case "wifi":
         return `WIFI:T:${wifiEncryption};S:${wifiSsid};P:${wifiPassword};;`;
       case "email":
@@ -80,7 +80,7 @@ export default function QrCodeGeneratorPage() {
     if (!qrDataUrl) return;
     const a = document.createElement("a");
     a.href = qrDataUrl;
-    a.download = `toolnest-qrcode-${Date.now()}.png`;
+    a.download = `mytoolshut-qrcode-${Date.now()}.png`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

@@ -15,14 +15,14 @@ import { Button } from "@/components/ui/Button";
 
 export default function MetaTagGeneratorPage() {
   const tool = getToolBySlug("meta-tag-generator")!;
-  const [title, setTitle] = useState("ToolNest — Free Online Tools for Everyone");
+  const [title, setTitle] = useState("MyToolsHut — Free Online Tools for Everyone");
   const [description, setDescription] = useState(
     "Compress images, convert files, shorten URLs, and use developer tools online for free. Fast and 100% private."
   );
-  const [url, setUrl] = useState("https://toolnest.site");
-  const [imageUrl, setImageUrl] = useState("https://toolnest.site/og-image.jpg");
-  const [siteName, setSiteName] = useState("ToolNest");
-  const [twitterHandle, setTwitterHandle] = useState("@toolnest");
+  const [url, setUrl] = useState("https://mytoolshut.com");
+  const [imageUrl, setImageUrl] = useState("https://mytoolshut.com/og-image.jpg");
+  const [siteName, setSiteName] = useState("MyToolsHut");
+  const [twitterHandle, setTwitterHandle] = useState("@mytoolshut");
   const [copied, setCopied] = useState(false);
 
   // Generate HTML tags
