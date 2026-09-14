@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { getSiteUrl } from "@/lib/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = getSiteUrl();
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://mytoolshut.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "MyToolsHut — Free Online Tools for Everyone",
     template: "%s | MyToolsHut",
@@ -40,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mytoolshut.com",
+    url: siteUrl,
     siteName: "MyToolsHut",
     title: "MyToolsHut — Free Online Tools for Everyone",
     description:

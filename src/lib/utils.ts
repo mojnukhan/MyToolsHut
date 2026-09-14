@@ -17,3 +17,11 @@ export function formatBytes(bytes: number, decimals = 2): string {
 export function formatNumber(num: number): string {
   return new Intl.NumberFormat().format(num);
 }
+
+export function getSiteUrl(): string {
+  let url = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://mytoolshut.com";
+  if (!url.startsWith("http://") && !url.startsWith("https://")) {
+    url = `https://${url}`;
+  }
+  return url.replace(/\/+$/, "");
+}

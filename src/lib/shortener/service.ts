@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { getSiteUrl } from "@/lib/utils";
 
 const RESERVED_ALIASES = new Set([
   "api",
@@ -150,8 +151,8 @@ export async function createShortUrl(params: {
     },
   });
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-  const fullShortUrl = `${baseUrl.replace(/\/+$/, "")}/s/${record.shortCode}`;
+  const baseUrl = getSiteUrl();
+  const fullShortUrl = `${baseUrl}/s/${record.shortCode}`;
 
   return {
     success: true,

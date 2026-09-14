@@ -1,8 +1,9 @@
 import React from "react";
 import { ToolDefinition, CATEGORIES } from "@/lib/tools/registry";
+import { getSiteUrl } from "@/lib/utils";
 
 export function ToolJsonLd({ tool }: { tool: ToolDefinition }) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mytoolshut.com";
+  const baseUrl = getSiteUrl();
   const category = CATEGORIES[tool.category];
 
   // 1. SoftwareApplication Schema
