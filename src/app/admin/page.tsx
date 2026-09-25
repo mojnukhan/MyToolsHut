@@ -64,11 +64,11 @@ export default function AdminDashboardPage() {
         const json = await res.json();
         setData(json);
         setIsAuthenticated(true);
-      } else {
+      } else if (res.status === 401) {
         setIsAuthenticated(false);
       }
     } catch {
-      setIsAuthenticated(false);
+      // Don't flip isAuthenticated to false on transient network error if already authenticated
     } finally {
       setIsLoadingData(false);
     }
@@ -81,19 +81,24 @@ export default function AdminDashboardPage() {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(null);
+    const trimmedKey = adminKey.trim();
+    if (!trimmedKey) {
+      setAuthError("Please enter the admin secret key.");
+      return;
+    }
     setIsLoggingIn(true);
 
     try {
       const res = await fetch("/api/admin/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ key: adminKey }),
+        body: JSON.stringify({ key: trimmedKey }),
       });
 
       if (res.ok) {
         setIsAuthenticated(true);
         setAdminKey("");
-        fetchDashboardData();
+        await fetchDashboardData();
       } else {
         const errJson = await res.json();
         setAuthError(errJson.error || "Authentication failed. Invalid secret key.");
