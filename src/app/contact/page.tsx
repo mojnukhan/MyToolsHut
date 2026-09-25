@@ -43,18 +43,64 @@ export default function ContactPage() {
     <div className="min-h-screen py-12 md:py-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center space-y-3">
-          <div className="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto">
+          <div className="w-12 h-12 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mx-auto shadow-sm">
             <Mail className="w-6 h-6" />
           </div>
-          <h1 className="text-3xl font-extrabold text-neutral-900 dark:text-white">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-neutral-900 dark:text-white">
             Contact Support & Feedback
           </h1>
           <p className="text-sm text-neutral-500 max-w-md mx-auto">
-            Have a question, feedback, or tool suggestion? We&apos;d love to hear from you.
+            Have a question, feedback, bug report, or tool suggestion? We&apos;d love to hear from you.
           </p>
         </div>
 
+        {/* Quick Contact Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 text-center">
+            <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1">
+              General Support
+            </div>
+            <a
+              href="mailto:support@mytoolshut.com"
+              className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+            >
+              support@mytoolshut.com
+            </a>
+            <div className="text-[11px] text-neutral-400 mt-1">
+              Feedback & Bug Reports
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 text-center">
+            <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1">
+              Privacy & Legal
+            </div>
+            <a
+              href="mailto:privacy@mytoolshut.com"
+              className="text-sm font-bold text-indigo-600 dark:text-indigo-400 hover:underline"
+            >
+              privacy@mytoolshut.com
+            </a>
+            <div className="text-[11px] text-neutral-400 mt-1">
+              GDPR, CCPA & DMCA
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-4 text-center">
+            <div className="text-xs font-semibold uppercase tracking-wider text-neutral-400 mb-1">
+              Response Time
+            </div>
+            <div className="text-sm font-bold text-neutral-800 dark:text-neutral-200">
+              Within 24 Hours
+            </div>
+            <div className="text-[11px] text-neutral-400 mt-1">
+              Monday – Friday (UTC)
+            </div>
+          </div>
+        </div>
+
         <div className="rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 sm:p-8 shadow-xs">
+
           {isSubmitted ? (
             <div className="py-12 text-center space-y-3">
               <div className="w-12 h-12 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mx-auto">

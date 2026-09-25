@@ -84,3 +84,54 @@ export function ToolJsonLd({ tool }: { tool: ToolDefinition }) {
     </>
   );
 }
+
+export function WebsiteJsonLd() {
+  const baseUrl = getSiteUrl();
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "MyToolsHut",
+    alternateName: ["My Tools Hut", "MyToolsHut Online Utilities"],
+    url: baseUrl,
+    description:
+      "Compress images, convert files, shorten URLs, download YouTube thumbnails, and use developer & SEO utilities — all free, fast, and browser-processed.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${baseUrl}/tools?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "MyToolsHut",
+    url: baseUrl,
+    logo: `${baseUrl}/icon.png`,
+    description:
+      "Modern online utilities platform engineered for privacy, speed, and 100% free accessibility.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "Customer Support",
+      email: "support@mytoolshut.com",
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+    </>
+  );
+}
+
