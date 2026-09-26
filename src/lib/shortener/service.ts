@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma, ensureDatabaseInitialized } from "@/lib/prisma";
 import { getSiteUrl } from "@/lib/utils";
 
 const RESERVED_ALIASES = new Set([
@@ -89,74 +89,88 @@ export async function createShortUrl(params: {
     return { success: false, error: val.error || "Invalid URL" };
   }
 
-  let finalCode = "";
+  try {
+    // Ensure database tables exist
+    await ensureDatabaseInitialized();
 
-  // 2. If custom alias provided
-  if (customAlias && customAlias.trim()) {
-    const alias = customAlias.trim().toLowerCase();
-    if (!/^[a-z0-9-_]{3,30}$/.test(alias)) {
-      return {
-        success: false,
-        error: "Custom alias must be 3-30 characters long and contain only letters, numbers, hyphens, and underscores.",
-      };
+    let finalCode = "";
+
+    // 2. If custom alias provided
+    if (customAlias && customAlias.trim()) {
+      const alias = customAlias.trim().toLowerCase();
+      if (!/^[a-z0-9-_]{3,30}$/.test(alias)) {
+        return {
+          success: false,
+          error: "Custom alias must be 3-30 characters long and contain only letters, numbers, hyphens, and underscores.",
+        };
+      }
+
+      if (RESERVED_ALIASES.has(alias)) {
+        return { success: false, error: "This alias is reserved by the system. Please pick another." };
+      }
+
+      const existing = await prisma.shortUrl.findFirst({
+        where: {
+          OR: [{ shortCode: alias }, { customAlias: alias }],
+        },
+      });
+
+      if (existing) {
+        return { success: false, error: "This custom alias is already in use. Please choose another one." };
+      }
+
+      finalCode = alias;
+    } else {
+      // Generate unique random code
+      let attempts = 0;
+      while (attempts < 5) {
+        attempts++;
+        const candidate = generateShortCode(6);
+        const exists = await prisma.shortUrl.findUnique({
+          where: { shortCode: candidate },
+        });
+        if (!exists) {
+          finalCode = candidate;
+          break;
+        }
+      }
+      if (!finalCode) {
+        finalCode = generateShortCode(8);
+      }
     }
 
-    if (RESERVED_ALIASES.has(alias)) {
-      return { success: false, error: "This alias is reserved by the system. Please pick another." };
+    // 3. Expiration date calculation
+    let expiresAt: Date | null = null;
+    if (expiresInDays && expiresInDays > 0) {
+      expiresAt = new Date(Date.now() + expiresInDays * 24 * 60 * 60 * 1000);
     }
 
-    const existing = await prisma.shortUrl.findFirst({
-      where: {
-        OR: [{ shortCode: alias }, { customAlias: alias }],
+    // 4. Save to database
+    const record = await prisma.shortUrl.create({
+      data: {
+        originalUrl: val.cleanUrl,
+        shortCode: finalCode,
+        customAlias: customAlias ? finalCode : null,
+        expiresAt,
       },
     });
 
-    if (existing) {
-      return { success: false, error: "This custom alias is already in use. Please choose another one." };
-    }
+    const baseUrl = getSiteUrl();
+    const fullShortUrl = `${baseUrl}/s/${record.shortCode}`;
 
-    finalCode = alias;
-  } else {
-    // Generate unique random code
-    let attempts = 0;
-    while (attempts < 5) {
-      attempts++;
-      const candidate = generateShortCode(6);
-      const exists = await prisma.shortUrl.findUnique({
-        where: { shortCode: candidate },
-      });
-      if (!exists) {
-        finalCode = candidate;
-        break;
-      }
-    }
-    if (!finalCode) {
-      finalCode = generateShortCode(8);
-    }
+    return {
+      success: true,
+      shortCode: record.shortCode,
+      shortUrl: fullShortUrl,
+    };
+  } catch (err) {
+    console.error("Failed to create short URL:", err);
+    return {
+      success: false,
+      error:
+        err instanceof Error
+          ? err.message
+          : "An unexpected error occurred while creating your short link.",
+    };
   }
-
-  // 3. Expiration date calculation
-  let expiresAt: Date | null = null;
-  if (expiresInDays && expiresInDays > 0) {
-    expiresAt = new Date(Date.now() + expiresInDays * 24 * 60 * 60 * 1000);
-  }
-
-  // 4. Save to database
-  const record = await prisma.shortUrl.create({
-    data: {
-      originalUrl: val.cleanUrl,
-      shortCode: finalCode,
-      customAlias: customAlias ? finalCode : null,
-      expiresAt,
-    },
-  });
-
-  const baseUrl = getSiteUrl();
-  const fullShortUrl = `${baseUrl}/s/${record.shortCode}`;
-
-  return {
-    success: true,
-    shortCode: record.shortCode,
-    shortUrl: fullShortUrl,
-  };
 }

@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const body = await req.json();
+    const body = await req.json().catch(() => ({}));
     const { originalUrl, customAlias, expiresInDays } = body;
 
     if (!originalUrl || typeof originalUrl !== "string") {
@@ -43,8 +43,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(result, { status: 201 });
   } catch (err: unknown) {
     console.error("URL Shortener API error:", err);
+    const message =
+      err instanceof Error
+        ? err.message
+        : "An unexpected error occurred while creating your short link.";
     return NextResponse.json(
-      { error: "An unexpected error occurred while creating your short link." },
+      { error: message },
       { status: 500 }
     );
   }

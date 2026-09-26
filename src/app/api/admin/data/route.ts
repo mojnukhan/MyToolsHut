@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma, ensureDatabaseInitialized } from "@/lib/prisma";
 import { TOOLS, CATEGORIES } from "@/lib/tools/registry";
 
 function isValidAdminToken(token: string | null | undefined): boolean {
@@ -36,6 +36,7 @@ export async function GET(req: NextRequest) {
     let dbStatus = "Connected (SQLite/Prisma)";
 
     try {
+      await ensureDatabaseInitialized();
       totalShortUrls = await prisma.shortUrl.count();
       const clicksAggregate = await prisma.shortUrl.aggregate({
         _sum: { clicks: true },
