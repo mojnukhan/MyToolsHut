@@ -156,7 +156,7 @@ export async function createShortUrl(params: {
     });
 
     const baseUrl = getSiteUrl();
-    const fullShortUrl = `${baseUrl}/s/${record.shortCode}`;
+    const fullShortUrl = `${baseUrl}/${record.shortCode}`;
 
     return {
       success: true,
